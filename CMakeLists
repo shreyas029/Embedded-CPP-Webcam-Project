@@ -1,0 +1,28 @@
+
+cmake_minimum_required(VERSION 3.10)
+
+project(WebcamCapture LANGUAGES CXX)
+
+# Use C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find pkg-config
+find_package(PkgConfig REQUIRED)
+
+# Find GStreamer
+pkg_check_modules(GSTREAMER REQUIRED
+    IMPORTED_TARGET
+    gstreamer-1.0
+)
+
+# Create executable
+add_executable(webcam_capture
+    webcam_capture.cpp
+)
+
+# Link GStreamer libraries
+target_link_libraries(webcam_capture
+    PRIVATE
+    PkgConfig::GSTREAMER
+)
