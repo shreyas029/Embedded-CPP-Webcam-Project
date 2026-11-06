@@ -1,6 +1,6 @@
 # Embedded-CPP-Webcam-Project
 
-# Webcam Capture and Grayscale JPEG Conversion using GStreamer (C++)
+## Webcam Capture and Grayscale JPEG Conversion using GStreamer (C++)
 
 ## Environment
 - Ubuntu 64-bit guest in Oracle VirtualBox 7.1.4
